@@ -1,0 +1,11 @@
+<h1>Heroine Create Page<h1/>
+
+<%= form_for @heroine  do |f| %>
+<%= f.label :"Name:" %><br>
+<%= f.text_field :name %><br>
+<%= f.label :"Super_name" %><br>
+<%= f.text_field :super_name %><br>
+<%= f.collection_select(power_id:, @powers.all, :id, :power_name )%><br>
+<%#<%= got stuck on the collection tag %>
+<%= f.submit %>
+<% end %>
