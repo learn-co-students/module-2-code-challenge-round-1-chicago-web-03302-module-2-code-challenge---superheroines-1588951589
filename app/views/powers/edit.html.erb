@@ -1,0 +1,15 @@
+<h3> Update Your Power </h3>
+
+<%= form_for @power do |f|%>
+  <%= f.label :name %>
+  <%= f.text_field :name%><br><br>
+
+  <%= f.label :description %>
+  <%= f.text_area :description%><br><br>
+
+  <%= f.collection_select :heroine_ids, Heroine.all, :id, :name %>
+
+  <%= f.submit%>
+
+<%end%>
+

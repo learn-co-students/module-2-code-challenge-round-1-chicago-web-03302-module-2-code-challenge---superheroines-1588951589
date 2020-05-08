@@ -1,0 +1,7 @@
+<h1><%= @heroine.name%><br></h1>
+
+Supername: <%= @heroine.super_name%><br>
+
+<% @heroine.powers.each do |power|%>
+  <%= power.name%><br>
+  <%end%>
