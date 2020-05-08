@@ -1,0 +1,8 @@
+<h1>Update Hero's Power</h1>
+
+<%= form_for @power do |f| %>
+  <br>
+  <%= f.label :power_ids, 'Powers' %>
+  <%= f.collection_select :power_names, @powers, :id, :name %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,12 @@
+<%= form_for heroine do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :supername %>
+  <%= f.text_field :super_name %>
+  <br>
+
+  <%# SELECT POWER %>
+  <%= f.label :power_ids, 'Power' %>
+  <br>
+  <%= f.submit %>
+<% end %>
