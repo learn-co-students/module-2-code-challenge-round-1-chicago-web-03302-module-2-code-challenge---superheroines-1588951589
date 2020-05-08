@@ -1,0 +1,8 @@
+<h1><%= @heroine.super_name %> Home Page<h1>
+<h3><%= @heroine.super_name %>'s secret identity is <%= @heroine.name %>. Shhhhhhhhhh<h3><br>
+Her powers are:
+<h3><% @heroine.powers.each do |power| %>
+<%=  link_to power.name, power_path(power) %><br>
+<% end %>
+
+<h4><%= link_to "Returnt to Heroines Index", heroines_path %>
