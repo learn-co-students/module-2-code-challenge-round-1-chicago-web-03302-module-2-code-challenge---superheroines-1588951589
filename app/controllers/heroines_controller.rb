@@ -12,7 +12,9 @@ class HeroinesController < ApplicationController
   end
 
   def create
-      @heroine = Heroine.new(heroine_params)
+      @heroine = Heroine.create(heroine_params)
+      heroine_power = Power.find(params[:heroine][:power_id])
+      #@heroine.powers << power
       if @heroine.valid?
          @heroine.save
          redirect_to @heroine
